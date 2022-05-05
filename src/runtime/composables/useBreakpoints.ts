@@ -1,7 +1,30 @@
 import { useNuxtApp } from 'nuxt/app';
 import {ref, onBeforeMount, onBeforeUnmount} from "#build/imports";
 
-const defaultBreakpoints = {
+interface INuxtBreakpoints {
+  current: string,
+
+  xs: boolean,
+
+  sm: boolean,
+  lSm: boolean,
+  sSm: boolean,
+
+  md: boolean,
+  lMd: boolean,
+  sMd: boolean,
+
+  lg: boolean,
+  lLg: boolean,
+  sLg: boolean,
+
+  xl: boolean,
+
+  width: number,
+  height: number,
+}
+
+const defaultBreakpoints: INuxtBreakpoints = {
   current: 'xs',
 
   xs: true,
@@ -77,7 +100,7 @@ const transformBreakpoints = (breakpoints, { width, height }, options) => {
   })
 }
 
-export function throttle(fn: Function, ms: number) {
+function throttle(fn: Function, ms: number) {
   let isCoolDown = false, lastArgs, lastThis;
 
   function wrapper() {
