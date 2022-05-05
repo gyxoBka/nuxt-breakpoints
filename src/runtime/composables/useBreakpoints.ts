@@ -1,5 +1,6 @@
 import { useNuxtApp } from 'nuxt/app';
 import {ref, onBeforeMount, onBeforeUnmount} from "#build/imports";
+import Ref from '@vue/reactivity'
 
 interface INuxtBreakpoints {
   current: string,
@@ -128,7 +129,7 @@ function throttle(fn: Function, ms: number) {
   return wrapper;
 }
 
-export const useBreakpoints = () => {
+export const useBreakpoints = ():Ref<INuxtBreakpoints> => {
   const { $breakpointsOptions } = useNuxtApp()
 
   let resizeObserver, bodyElem
