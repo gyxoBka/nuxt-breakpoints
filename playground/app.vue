@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const bp = useBreakpoints()
 
 const isSmallThanMd = computed(() => bp.value.sMd)

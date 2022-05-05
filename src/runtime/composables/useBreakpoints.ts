@@ -1,4 +1,5 @@
 import { useNuxtApp } from 'nuxt/app';
+import {ref, onBeforeMount, onBeforeUnmount} from "#build/imports";
 
 const defaultBreakpoints = {
   current: 'xs',

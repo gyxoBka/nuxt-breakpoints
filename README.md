@@ -7,14 +7,10 @@ Module adds to your app easy way to control web page breakpoints
 First install
 
 ```sh
-# for npm
 npm install nuxt3-breakpoints --save
-
-# for yarn
-yarn add nuxt3-breakpoints
 ```
 
-After the installation in the previous section, you need to add `nuxt-breakpoints` module to `modules` options of `nuxt.confg.[ts|js]`
+After the installation in the previous section, you need to add `nuxt3-breakpoints` module to `modules` options of `nuxt.confg.[ts|js]`
 
 ```js
 // nuxt.config.ts
@@ -23,7 +19,7 @@ export default defineNuxtConfig({
   modules: ['nuxt3-breakpoints'],
   /// OR
   modules: [
-    ['nuxt-breakpoints', {
+    ['nuxt3-breakpoints', {
       sm: 576,
       md: 768,
       lg: 992,
@@ -35,7 +31,7 @@ export default defineNuxtConfig({
   ],
   // ...
   //also you configure it with module key
-  'nuxt-breakpoints': {
+  'nuxt3-breakpoints': {
     sm: 576,
     md: 768,
     lg: 992,
